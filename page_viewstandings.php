@@ -11,13 +11,13 @@
 
     if ($query->num_rows == 0) {
     ?>
-    <br><br>
-
-    <table width="70%" align="center" border="1">
-        <tr>
-            <td align="left">The requested pool does not exist or is not eligible for viewing picks and standings because the March Madness season has not yet begun.  If you feel that this is an error, please contact the Contest Administrator.</td>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="jumbotron">
+            <p class="lead">
+                The requested pool does not exist or is not eligible for viewing picks and standings because the March Madness season has not yet begun.  If you feel that this is an error, please contact the Contest Administrator.
+            </p>
+        </div>
+    </div>
     <?
         $query->close();
     } else {
@@ -51,16 +51,18 @@
                 break;
         }
 ?>
-    <br>
-    <table width="80%" align="center" border="1">
-        <tr>
-            <td align="left"><b><? echo $r_name; ?> and Point Standings, Last Updated <? echo date('l, F j, Y @ g:i A', strtotime($b_updated)); ?></b></td>
-        </tr>
-        <tr>
-            <td align="left">This page has picks that each person or entry has remaining in this pool, based on the version of the page you chose to load.  Each entry appears in its own row, and each of the remaining teams (or all, in the case of all picks) appears across the top.  If an entry has the team corresponding to a particular column, that team's name is repeated in that entry's row.  Finally, numbers appear next to each team that has 1 or more wins; the format (X/Y) means, for a given team, it has X wins, which according to our March Madness rules, grants Y points to that entry.<br><br>Note that, with the exception of "all" picks which are sorted by display name, entries are sorted by current points, remaining number of teams (for a given round), and then by username.<br><br>* The points possible column is experimental; results may very and presented as-is.  No warranty available.<br><br>** The 'Initial FTE EV' column is the initial expected number of points for each person, based on Nate Silver's predictions at FiveThirtyEight.Com, and the 'Live FTE EV' column uses the most recent data from 538.</td>
-        </tr>
-    </table>
-    <br><br>
+  <div class="container">
+    <div class="jumbotron">
+        <h1 class="title">
+            <? echo $r_name; ?> and Point Standings
+        </h1>
+        <p class="text-muted">
+            Last Updated <? echo date('l, F j, Y @ g:i A', strtotime($b_updated)); ?>
+        </p>
+        <p class="lead">
+            This page has picks that each person or entry has remaining in this pool, based on the version of the page you chose to load.  Each entry appears in its own row, and each of the remaining teams (or all, in the case of all picks) appears across the top.  If an entry has the team corresponding to a particular column, that team's name is repeated in that entry's row.  Finally, numbers appear next to each team that has 1 or more wins; the format (X/Y) means, for a given team, it has X wins, which according to our March Madness rules, grants Y points to that entry.<br><br>Note that, with the exception of "all" picks which are sorted by display name, entries are sorted by current points, remaining number of teams (for a given round), and then by username.<br><br>* The points possible column is experimental; results may very and presented as-is.  No warranty available.<br><br>** The 'Initial FTE EV' column is the initial expected number of points for each person, based on Nate Silver's predictions at FiveThirtyEight.Com, and the 'Live FTE EV' column uses the most recent data from 538.
+        </p>
+    </div>
 
     <table style="font-size: 80%;" align="center" border="1">
         <tr>
@@ -150,5 +152,6 @@
         }
 ?>
     </table>
+  </div>
 <?
     }

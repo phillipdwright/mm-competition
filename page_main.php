@@ -1,12 +1,9 @@
-        <table width="60%" align="center" border="1">
-            <tr>
-                <td>
+        <div class="container">
+            <div class="jumbotron">
+                <p class="lead">
                     Welcome to the Roanoke College March Madness Pool System!  On this page, you can submit your entry for the current year's pool up until the start of the initial round of March Madness for this year (see below for open pools), view picks and standings for this year's pool (after the first round has started), and also view picks and standings for previous pools (spring 2016 and beyond).
-                </td>
-            </tr>
-        </table>
-
-        <br><br>
+                </p>
+            </div>
 
         <table width="60%" border="1" align="center">
                 <tr>
@@ -154,4 +151,4 @@
             ?>
         </table>
 
-        <br><br>
+        </div>

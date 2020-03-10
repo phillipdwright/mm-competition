@@ -25,4 +25,8 @@
 			color: purple;
 			text-decoration: underline;
 		}
+		.jumbotron {
+			background-color: #ffffff;
+			margin-top: 1rem;
+		}
 	</style>
