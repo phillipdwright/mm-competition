@@ -5,7 +5,7 @@
                 </p>
             </div>
 
-        <table width="60%" border="1" align="center">
+        <table class="table">
                 <tr>
                     <td colspan="3" align="left"><b>open pools</b></td>
                 </tr>
@@ -26,9 +26,9 @@
             while($query->fetch()) {
             ?>
                 <tr>
-                    <td align="left"><? echo $b_name; ?></td>
-                    <td align="center">Enrollment Ends <? echo date('l, F j, Y @ g:i A', strtotime($b_startdate)); ?></td>
-                    <td align="center"><a href="./index.php?action=enroll1&bid=<? echo $b_id; ?>">enroll now</a></td>
+                    <td><? echo $b_name; ?></td>
+                    <td>Enrollment Ends <? echo date('l, F j, Y @ g:i A', strtotime($b_startdate)); ?></td>
+                    <td><a href="./index.php?action=enroll1&bid=<? echo $b_id; ?>">enroll now</a></td>
                 </tr>
             <?
             }
@@ -38,9 +38,7 @@
 ?>
         </table>
 
-        <br><br>
-
-        <table width="60%" border="1" align="center">
+        <table class="table">
             <tr>
                 <td colspan="3" align="left"><b>active pools</b></td>
             </tr>
@@ -61,9 +59,9 @@
                 while($query->fetch()) {
                     ?>
                     <tr>
-                        <td align="left"><? echo $b_name; ?></td>
-                        <td align="center"><a href="./index.php?action=comments&bid=<? echo $b_id; ?>">discussion board</a></td>
-                        <td align="center">picks/standings:
+                        <td><? echo $b_name; ?></td>
+                        <td><a href="./index.php?action=comments&bid=<? echo $b_id; ?>">discussion board</a></td>
+                        <td>picks/standings:
 <?
                     switch ($b_round) {
                         case 6:
@@ -108,9 +106,7 @@
             ?>
         </table>
 
-        <br><br>
-
-        <table width="60%" border="1" align="center">
+        <table class="table">
             <tr>
                 <td colspan="3" align="left"><b>past pools</b></td>
             </tr>
@@ -131,9 +127,9 @@
                 while($query->fetch()) {
                     ?>
                     <tr>
-                        <td align="left"><? echo $b_name; ?></td>
-                        <td align="center"><a href="./index.php?action=comments&bid=<? echo $b_id; ?>">discussion board</a></td>
-                        <td align="center">picks/standings:
+                        <td><? echo $b_name; ?></td>
+                        <td><a href="./index.php?action=comments&bid=<? echo $b_id; ?>">discussion board</a></td>
+                        <td>picks/standings:
                             <a href="./index.php?action=viewstandings&bid=<? echo $b_id; ?>&round=6">final</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                             <a href="./index.php?action=viewstandings&bid=<? echo $b_id; ?>&round=5">2</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                             <a href="./index.php?action=viewstandings&bid=<? echo $b_id; ?>&round=4">4</a>&nbsp;&nbsp;|&nbsp;&nbsp;
